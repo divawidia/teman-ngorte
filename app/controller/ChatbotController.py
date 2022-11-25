@@ -18,6 +18,8 @@ from keras.preprocessing.text import Tokenizer
 from keras_preprocessing.sequence import pad_sequences
 from keras.models import load_model
 
+from sklearn.preprocessing import LabelEncoder
+
 with open('C:/Users/wiart/Documents/Backend Teman Ngorte - TUBES DEEP LEARNING/Backend/app/controller/mentalhealth_intent_update2_new.json') as content:
     data1 = json.load(content)
 #getting all the data to lists
@@ -48,7 +50,6 @@ tokenizer.fit_on_texts(data['inputs'])
 train = tokenizer.texts_to_sequences(data['inputs'])
 x_train = pad_sequences(train)
 
-from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 y_train = le.fit_transform(data['tags'])
 
