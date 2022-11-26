@@ -9,7 +9,7 @@ class Config(object):
     PASSWORD = str(os.environ.get("DB_PASSWORD"))
     
     JWT_SECRET_KEY = str(os.environ.get("JWT_SECRET"))
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:@34.101.214.166:3306/chatbot_deeplearning'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:qwertyuiop@34.101.214.166:3306/chatbot_deeplearning'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_RECORD_QUERIES = True
     
