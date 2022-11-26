@@ -20,7 +20,7 @@ from keras.models import load_model
 
 from sklearn.preprocessing import LabelEncoder
 
-with open('C:/Users/wiart/Documents/Backend Teman Ngorte - TUBES DEEP LEARNING/Backend/app/controller/mentalhealth_intent_update2_new.json') as content:
+with open('teman-ngorte/app/controller/mentalhealth_intent_update2_new.json') as content:
     data1 = json.load(content)
 #getting all the data to lists
 tags = []
@@ -55,7 +55,7 @@ y_train = le.fit_transform(data['tags'])
 
 input_shape = x_train.shape[1]
 
-model = load_model('C:/Users/wiart/Documents/Backend Teman Ngorte - TUBES DEEP LEARNING/Backend/app/controller/model.h5')
+model = load_model('teman-ngorte/app/controller/model.h5')
 
 def get_response(message):
     texts_p = []
