@@ -15,4 +15,4 @@ from app.model import user, message
 from app import routes
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5005)
+    app.run()
