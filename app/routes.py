@@ -25,17 +25,17 @@ def loginGuests():
     return UserController.loginGuest()
 
 
-@app.route('/chatbot-guest', methods=['GET'])
-@jwt_required()
-def botResponse():
-    current_user = get_jwt_identity()
-    return ChatbotController.bot_response_guest(current_user)
+# @app.route('/chatbot-guest', methods=['GET'])
+# @jwt_required()
+# def botResponse():
+#     current_user = get_jwt_identity()
+#     return ChatbotController.bot_response_guest(current_user)
 
-@app.route('/chatbot-user', methods=['POST', 'GET'])
-@jwt_required()
-def botUserResponse():
-    current_user = get_jwt_identity()
-    if request.method == 'POST':
-        return ChatbotController.post_bot_response_user(current_user)
-    else:
-        return ChatbotController.get_bot_response_user(current_user)
+# @app.route('/chatbot-user', methods=['POST', 'GET'])
+# @jwt_required()
+# def botUserResponse():
+#     current_user = get_jwt_identity()
+#     if request.method == 'POST':
+#         return ChatbotController.post_bot_response_user(current_user)
+#     else:
+#         return ChatbotController.get_bot_response_user(current_user)
